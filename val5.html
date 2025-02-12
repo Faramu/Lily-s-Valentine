@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine Animation</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: url('g/t1.jpg') no-repeat center center/cover;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+        }
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            clip-path: polygon(50% 0%, 100% 35%, 80% 100%, 50% 80%, 20% 100%, 0% 35%);
+            animation: float 5s linear infinite;
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+        }
+        .text {
+            font-size: 80px;
+            font-weight: bold;
+            color: black;
+            margin-bottom: 10px;
+        }
+        .buttons {
+            gap: 30px;
+        }
+        .button {
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.yes-button {
+    background-color: green;
+    font-size: 400px; /* Ukuran lebih besar */
+    padding: 300px 300px;
+}
+
+.no-button {
+    background-color: red;
+    font-size: 40px; /* Ukuran lebih besar */
+    padding: 10px 20px;
+}
+        .flower {
+            position: absolute;
+            top: 0;
+            font-size: 24px;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="buttons">
+    <button class="button yes-button" onclick="window.location.href='val6.html'">Coklat!</button>
+    </div>
+</body>
+</html>
